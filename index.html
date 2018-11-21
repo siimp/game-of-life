@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>The Game of Life</title>
+<style>
+#canvas {
+	border: 1px solid black;
+	display: none;
+}
+.button {
+    display: none;
+    border: none;
+    color: white;
+    padding: 12px 28px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+<h1>The Game of Life (<span id="cellsInARow"></span>x<span id="cellsInAColumn"></span>) 
+<button id="resetButton" onclick="resetGame()" class="button">RESET</button>
+</h1>
+<canvas id="canvas" width="1" height="1"></canvas>
+
+<script src="cell.js"></script>
+<script src="game.js"></script>
+<script src="gameConfig.js"></script>
+<script src="gameEngine.js"></script>
+</body>
+</html>
