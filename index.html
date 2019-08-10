@@ -2,53 +2,70 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Conway's Game of Life</title>
 <style>
 @import url('https://fonts.googleapis.com/css?family=Roboto:400&display=swap');
 
 body {
-  max-width: 160ch;
-  padding: 2ch;
-  margin: auto;
+  margin: 0;
+  padding: 0.5ch;
   font-family: 'Roboto', sans-serif;
+  text-align: center;
 }
 
-.center {
-  width: 50%;
-  margin: auto;
-}
-
-.flex-container {
-  display: flex;
+h1 {
+  font-size: 2ch;
 }
 
 #canvas {
 	border: 1px solid black;
 	display: none;
+	margin: auto;
 }
 
 .button {
     display: none;
     border: none;
     color: white;
-    padding: 12px 28px;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 2ch;
     cursor: pointer;
+    width: 100%;
+    padding-top: 1ch;
+    padding-bottom: 1ch;
+    margin-top: 2ch;
 }
+
+@media (min-width: 600px) {
+  body {
+    max-width: 90ch;
+    padding: 2ch;
+    margin: auto;
+    text-align: left;
+  }
+  .button {
+    width:10ch;
+  }
+  #canvas {
+	  margin: 0;
+  }
+  h1 {
+    font-size: 4ch;
+  }
+}
+
 </style>
 </head>
 
 <body>
-<div class="center">
-  <div class="flex-container">
-    <div><h1>Conway's Game of Life (<span id="cellsInARow"></span>x<span id="cellsInAColumn"></span>)</h1></div>
-    <div style="margin:auto;"><button id="resetButton" onclick="resetGame()" class="button">RESET</button></div>
-  </div>
-  <canvas id="canvas" width="1" height="1"></canvas>
+<h1>Conway's Game of Life (<span id="cellsInARow"></span>x<span id="cellsInAColumn"></span>)</h1>
+<canvas id="canvas" width="1" height="1"></canvas>
+<div>
+  <button id="resetButton" onclick="resetGame()" class="button">RESET</button>
 </div>
+
 <script src="cell.js"></script>
 <script src="game.js"></script>
 <script src="gameConfig.js"></script>

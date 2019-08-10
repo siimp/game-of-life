@@ -3,7 +3,7 @@
 const config = {
   CELLS_IN_A_ROW : 64,
   CELLS_IN_A_COLUMN : 64,
-  CELL_SIZE_IN_PIXELS : 10,
+  CELL_SIZE_IN_PIXELS : 5,
   CELL_COLOR : 'green',
   FPS : 30
 };
